@@ -1,0 +1,628 @@
+openapi: 3.0.1
+info:
+  title: WebService.Cap7
+  version: '1.0'
+paths:
+  /api/Alerta:
+    get:
+      tags:
+      - Alerta
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 10
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alerta'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alerta'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alerta'
+    post:
+      tags:
+      - Alerta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+  /api/Alerta/{id}:
+    get:
+      tags:
+      - Alerta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Alerta'
+    put:
+      tags:
+      - Alerta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Alerta'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Alerta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+  /api/Coleta:
+    get:
+      tags:
+      - Coleta
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 10
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Coleta'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Coleta'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Coleta'
+    post:
+      tags:
+      - Coleta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+  /api/Coleta/{id}:
+    get:
+      tags:
+      - Coleta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Coleta'
+    put:
+      tags:
+      - Coleta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Coleta'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Coleta
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+  /api/PontosDeDescarte:
+    get:
+      tags:
+      - PontosDeDescarte
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 10
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PontoDeDescarte'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PontoDeDescarte'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PontoDeDescarte'
+    post:
+      tags:
+      - PontosDeDescarte
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+  /api/PontosDeDescarte/{id}:
+    get:
+      tags:
+      - PontosDeDescarte
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PontoDeDescarte'
+    put:
+      tags:
+      - PontosDeDescarte
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PontoDeDescarte'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - PontosDeDescarte
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+  /api/Residuo:
+    get:
+      tags:
+      - Residuo
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 10
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Residuo'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Residuo'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Residuo'
+    post:
+      tags:
+      - Residuo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+  /api/Residuo/{id}:
+    get:
+      tags:
+      - Residuo
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Residuo'
+    put:
+      tags:
+      - Residuo
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Residuo'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Residuo
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    Alerta:
+      required:
+      - mensagem
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        mensagem:
+          minLength: 1
+          type: string
+        dataCriacao:
+          type: string
+          format: date-time
+        resolvido:
+          type: boolean
+        pontoDeDescarteId:
+          type: integer
+          format: int32
+          nullable: true
+        ponto:
+          $ref: '#/components/schemas/PontoDeDescarte'
+        coletaId:
+          type: integer
+          format: int32
+          nullable: true
+        coleta:
+          $ref: '#/components/schemas/Coleta'
+      additionalProperties: false
+    Coleta:
+      required:
+      - dataHora
+      - pontoDeDescarteId
+      - quantidade
+      - residuoId
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        dataHora:
+          type: string
+          format: date-time
+        quantidade:
+          maximum: 10000
+          minimum: 0.1
+          type: number
+          format: double
+        pontoDeDescarteId:
+          type: integer
+          format: int32
+        ponto:
+          $ref: '#/components/schemas/PontoDeDescarte'
+        residuoId:
+          type: integer
+          format: int32
+        residuo:
+          $ref: '#/components/schemas/Residuo'
+      additionalProperties: false
+    PontoDeDescarte:
+      required:
+      - cidade
+      - endereco
+      - estado
+      - nome
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        nome:
+          maxLength: 100
+          minLength: 0
+          type: string
+        endereco:
+          maxLength: 200
+          minLength: 0
+          type: string
+        cidade:
+          maxLength: 100
+          minLength: 0
+          type: string
+        estado:
+          maxLength: 50
+          minLength: 0
+          type: string
+        quantidadeAtualKg:
+          type: number
+          format: double
+        capacidadeMaximaKg:
+          type: number
+          format: double
+        coletas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Coleta'
+          nullable: true
+      additionalProperties: false
+    Residuo:
+      required:
+      - nome
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        nome:
+          maxLength: 100
+          minLength: 0
+          type: string
+        descricao:
+          maxLength: 500
+          minLength: 0
+          type: string
+          nullable: true
+        peso:
+          type: number
+          format: double
+        dataColeta:
+          type: string
+          format: date-time
+      additionalProperties: false
+servers:
+- url: http://localhost:8080
+  description: Local dev server

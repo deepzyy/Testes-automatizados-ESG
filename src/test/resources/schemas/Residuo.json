@@ -1,0 +1,33 @@
+{
+  "required": [
+    "nome"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "nome": {
+      "maxLength": 100,
+      "minLength": 0,
+      "type": "string"
+    },
+    "descricao": {
+      "maxLength": 500,
+      "minLength": 0,
+      "type": "string",
+      "nullable": true
+    },
+    "peso": {
+      "type": "number",
+      "format": "double"
+    },
+    "dataColeta": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

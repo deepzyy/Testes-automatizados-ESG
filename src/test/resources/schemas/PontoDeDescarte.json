@@ -1,0 +1,52 @@
+{
+  "required": [
+    "cidade",
+    "endereco",
+    "estado",
+    "nome"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "nome": {
+      "maxLength": 100,
+      "minLength": 0,
+      "type": "string"
+    },
+    "endereco": {
+      "maxLength": 200,
+      "minLength": 0,
+      "type": "string"
+    },
+    "cidade": {
+      "maxLength": 100,
+      "minLength": 0,
+      "type": "string"
+    },
+    "estado": {
+      "maxLength": 50,
+      "minLength": 0,
+      "type": "string"
+    },
+    "quantidadeAtualKg": {
+      "type": "number",
+      "format": "double"
+    },
+    "capacidadeMaximaKg": {
+      "type": "number",
+      "format": "double"
+    },
+    "coletas": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Coleta"
+      },
+      "nullable": true
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
